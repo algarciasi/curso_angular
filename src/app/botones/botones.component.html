@@ -1,11 +1,23 @@
 <div>
-    <button [class.disabled]="button_disabled" class="btn btn-danger" (click)="text_color = 'text-danger'">Color Rojo</button>
-    <button [class.disabled]="button_disabled" class="btn btn-success mx-2" (click)="text_color = 'text-success'">Color Verde</button>
-    <button [class.disabled]="button_disabled" class="btn btn-primary" (click)="text_color = 'text-primary'">Color Azul</button>
+    <button [disabled]="button_disabled" class="btn btn-danger" (click)="text_color = 'text-danger'">
+        Color Rojo
+    </button>
+    <button [disabled]="button_disabled" class="btn btn-success mx-2" (click)="text_color = 'text-success'">
+        Color Verde
+    </button>
+    <button [disabled]="button_disabled" class="btn btn-primary" (click)="text_color = 'text-primary'">
+        Color Azul
+    </button>
 </div>
 
-<p [class]="text_color">Texto que va a cambiar de color</p>
+<p>Texto que va a cambiar de color</p>
 
 <button class="btn btn-secondary" (click)="button_disabled = !button_disabled">
     Activar/Desactivar
 </button>
+
+<div>
+    <button class="btn btn-primary" (click)="src = 'https://images.pexels.com/photos/20988585/pexels-photo-20988585/free-photo-of-ciudad-noche-panorama-urbano-skyline.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' ">Imagen 1</button>
+    <button class="btn btn-danger" (click)="src = 'https://images.pexels.com/photos/27308720/pexels-photo-27308720/free-photo-of-mar-playa-vacaciones-agua.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'">Imagen 2</button>
+</div>
+<img [src]="src" alt="" />
